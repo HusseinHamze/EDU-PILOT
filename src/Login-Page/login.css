@@ -1,0 +1,107 @@
+
+.login-card{
+    display: flex;
+    width: 800px; 
+    height: 500px; 
+    background-color: #AFCBFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.Info-side-container {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0E1C36; 
+  }
+
+  .element-side-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-info {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .login-info h1 {
+    margin-bottom: 0;
+    color: #D7F9FF;
+  }
+
+  .login-info p {
+    font-size: 12px;
+    margin-top: 0;
+    color: rgba(215, 249, 255,0.7);
+  }
+
+  .login-info input {
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid rgba(215, 249, 255,0.5);
+    outline: 0;
+    color: #D7F9FF;
+    padding: 7px 0;
+  }
+
+  .login-info input::placeholder{
+    color: rgba(215, 249, 255,0.5);
+  }
+
+  .login-info a {
+    text-decoration: none;
+    color: rgba(215, 249, 255,0.5);
+    font-size: 12px;
+  }
+
+  .login-info button {
+    background-color: #AFCBFF;
+    color: #0E1C36;
+    border: none;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .login-info button:hover {
+    background-color: hsl(219, 100%, 74%);
+  }
+
+  .signup{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .signup p {
+    color: rgba(215, 249, 255,0.5);
+  }
+
+  .signup button {
+    background-color: #AFCBFF;
+    color: #0E1C36;
+    border: none;
+    height: 30px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .signup button:hover {
+    background-color: hsl(219, 100%, 74%);
+  }
