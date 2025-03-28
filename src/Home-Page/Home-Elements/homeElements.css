@@ -1,0 +1,32 @@
+.home-elements-container {
+    position: relative;
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .vectorShape-container , .home-img-container{
+    position: absolute;
+  }
+
+  .vectorShape-container {
+    bottom: 0;
+    left: 0; 
+    width: 400px; 
+    height: auto; 
+  }
+
+  .home-img-container {
+    bottom: 30%;
+    right: 1%; 
+    width: 350px; 
+    height: auto; 
+  }
+
+  img{
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+  }
