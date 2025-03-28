@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import './HomeNav.css'
+import './HomeHeader.css'
 
-function HomeNavbar(){
+function HomeHeader(){
 
     return(
         <nav className="home-navbar-container">
@@ -10,10 +10,10 @@ function HomeNavbar(){
                 <li><Link to="/">ChatBot</Link></li>
                 <li><Link to="/">Help</Link></li>
                 <li><Link to="/">About</Link></li>
-                <li><Link to="/Login">Login|Signup</Link></li>
+                <li><Link to="/Login">Login</Link></li>
             </ul>
         </nav>
     );
 }
 
-export default HomeNavbar
+export default HomeHeader
