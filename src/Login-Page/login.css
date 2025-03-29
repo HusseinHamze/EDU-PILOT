@@ -23,31 +23,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
     background-color: #F0F8FF; 
     font-size: 14px; 
     color: #0E1C36; 
 }
-=======
-    background-color: #F0F8FF; /* New background color */
-    font-size: 14px; /* New font size */
-    color: #0E1C36; /* Text color */
-}
-
->>>>>>> cdfac51afbe32b4d1c19489733e91ef971acc5b1
 .login-info {
     width: 100%;
     max-width: 300px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-<<<<<<< HEAD
     max-height: 400px; 
     overflow-y: auto;  
-=======
-    max-height: 400px; /* Adjust height to fit additional fields */
-    overflow-y: auto;  /* Add scroll if content overflows */
->>>>>>> cdfac51afbe32b4d1c19489733e91ef971acc5b1
 }
 
 .login-info h1 {
@@ -120,7 +107,6 @@
 
 .signup button:hover {
     background-color: hsl(219, 100%, 74%);
-<<<<<<< HEAD
 }
 .login-card {
     display: flex;
@@ -150,6 +136,4 @@
     background-color: #F0F8FF;
     font-size: 14px;
     color: #1f3b6e;
-=======
->>>>>>> cdfac51afbe32b4d1c19489733e91ef971acc5b1
 }
