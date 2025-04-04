@@ -1,5 +1,5 @@
-import HomeHeader from "./Home-Header/HomeHeader"
-import HeroSection from "./Hero/HeroSection"
+import HomeHeader from "./NavBar"
+import HeroSection from "./HomeBody"
 
 function Home(){
     return(
