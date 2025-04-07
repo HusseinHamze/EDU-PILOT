@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Plane } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -19,7 +20,11 @@ function HomeHeader() {
         {["Home", "ChatBot", "Team", "Majors", "About"].map((text, index) => (
           <Link
             key={index}
-            to="/"
+            to={
+              text === "Home" ? "/" : 
+              text === "ChatBot" ? "/chatbot" : 
+              `/${text.toLowerCase()}`
+            }
             className="relative group overflow-hidden pb-1 transition-all duration-300 ease-in-out hover:text-[#142c5e] hover:font-bold"
           >
             {text}

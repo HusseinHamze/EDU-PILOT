@@ -1,9 +1,12 @@
 import { useState } from 'react';
-
+import NavBar from '../Multi-Use/NavBar';
+import Footer from '../Multi-Use/Footer';
 function Login() {
   const [isSignup, setIsSignup] = useState(false);
 
   return (
+    <>
+    <NavBar/>
     <div className="flex items-center justify-center h-screen">
       <div className="flex bg-[#AFCBFF] w-[50%] h-[70%] rounded-lg shadow-md">
         {/* Info Side */}
@@ -41,6 +44,8 @@ function Login() {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

@@ -1,6 +1,6 @@
-import NavBar from "./NavBar"
+import NavBar from "../Multi-Use/NavBar"
 import HomeBody from "./HomeBody"
-import Footer from "./Footer"
+import Footer from "../Multi-Use/Footer"
 
 function Home(){
     return(
