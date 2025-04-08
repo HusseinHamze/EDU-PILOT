@@ -1,7 +1,8 @@
+@import "tailwindcss";
 body{
-    background-color: #FFEDE1;
+    background-color: #AFCBFF;
     font-family: 'roboto',sans-serif;
-    background-image: radial-gradient(#0E1C36 0.5px, #FFEDE1 0.5px);
+    background-image: radial-gradient(#0E1C36 0.5px, #AFCBFF 0.5px);
     background-size: 10px 10px;
     margin: 0;
     padding: 0;

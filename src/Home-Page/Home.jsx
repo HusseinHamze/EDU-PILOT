@@ -1,11 +1,13 @@
-import HomeHeader from "./Home-Header/HomeHeader"
-import HeroSection from "./Hero/HeroSection"
+import NavBar from "../Multi-Use/NavBar"
+import HomeBody from "./HomeBody"
+import Footer from "../Multi-Use/Footer"
 
 function Home(){
     return(
         <>
-        <HomeHeader/>
-        <HeroSection/>
+        <NavBar/>
+        <HomeBody/>
+        <Footer/>
         </>
     )
 }
