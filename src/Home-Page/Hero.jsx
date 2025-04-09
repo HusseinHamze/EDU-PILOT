@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <main className="flex flex-col md:flex-row items-center px-8 py-20 max-w-6xl mx-auto gap-12">
+    <main className="flex flex-col md:flex-row items-center px-8 py-20 mt-18 max-w-6xl mx-auto gap-12">
       {/* Text Section */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}

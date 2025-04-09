@@ -68,14 +68,14 @@ export default function Faq() {
 
   return (
     <motion.section 
-      className="max-w-4xl mx-auto px-8 py-20 bg-[#AFCBFF] rounded-lg border border-[#0E1C36]"
+      className="w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-12 md:py-16 lg:py-20 bg-[#AFCBFF] rounded-lg border border-[#0E1C36]"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.5 }}
       transition={{ duration: 0.6 }}
     >
       <motion.h2 
-        className="text-3xl font-bold text-center mb-10 text-[#0E1C36]"
+        className="text-2xl sm:text-3xl font-bold text-center mb-8 md:mb-10 text-[#0E1C36]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: false, amount: 0.5 }}
@@ -85,7 +85,7 @@ export default function Faq() {
       </motion.h2>
       
       <motion.div 
-        className="space-y-4"
+        className="space-y-3 sm:space-y-4"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -94,21 +94,21 @@ export default function Faq() {
         {faqs.map((faq, index) => (
           <motion.div
             key={index}
-            className="accordion py-4 border-b border-solid border-[#0E1C36]"
+            className="accordion py-3 sm:py-4 border-b border-solid border-[#0E1C36]"
             id={`basic-heading-${index}-default`}
             variants={itemVariants}
             whileHover={{ scale: 1.01 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             <motion.button
-              className="accordion-toggle group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-[#142c5e]"
+              className="accordion-toggle group inline-flex items-center justify-between w-full transition duration-500 hover:text-[#142c5e] text-left"
               aria-controls={`basic-collapse-${index}-default`}
               onClick={() => toggleFAQ(index)}
               whileTap={{ scale: 0.98 }}
             >
-              <h5 className="text-lg text-left">{faq.question}</h5>
+              <h5 className="text-base sm:text-lg font-medium">{faq.question}</h5>
               <motion.svg
-                className="text-[#0E1C36] transition duration-500 group-hover:text-[#142c5e]"
+                className="text-[#0E1C36] transition duration-500 group-hover:text-[#142c5e] flex-shrink-0 ml-4"
                 width="22"
                 height="22"
                 viewBox="0 0 22 22"
@@ -131,13 +131,15 @@ export default function Faq() {
             
             <motion.div
               id={`basic-collapse-${index}-default`}
-              className="accordion-content w-full px-0 overflow-hidden pr-4"
+              className="accordion-content w-full overflow-hidden"
               aria-labelledby={`basic-heading-${index}-default`}
               initial={false}
               animate={openIndex === index ? "open" : "closed"}
               variants={answerVariants}
             >
-              <p className="text-sm text-[#0E1C36]/80 leading-6">{faq.answer}</p>
+              <p className="text-sm sm:text-base text-[#0E1C36]/80 leading-6 pt-2 pb-1">
+                {faq.answer}
+              </p>
             </motion.div>
           </motion.div>
         ))}

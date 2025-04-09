@@ -27,7 +27,7 @@ export default function Footer() {
 
   return (
     <motion.footer 
-      className="bg-[#0E1C36] text-white py-10 px-8"
+      className="bg-[#0E1C36] text-white py-10 px-8 mt-5"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: false, amount: 0.2 }}
@@ -68,7 +68,7 @@ export default function Footer() {
             Quick Links
           </motion.h4>
           <motion.ul className="space-y-1 text-sm text-gray-300">
-            {['Home', 'Assessment', 'FAQs', 'Contact'].map((link, index) => (
+            {['Home','How It Works' ,'Features','FAQs', 'Testimonials'].map((link, index) => (
               <motion.li 
                 key={index}
                 whileHover={{ 
