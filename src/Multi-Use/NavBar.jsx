@@ -49,7 +49,7 @@ function HomeHeader() {
       className="w-full z-50 bg-white/80 backdrop-blur-sm fixed top-0 left-0 flex justify-between items-center p-4 md:p-6 text-[#0E1C36] border-b border-[#0E1C36] shadow-sm"
     >
       {/* Logo */}
-      <Link to="/" className="text-2xl md:text-3xl font-bold flex items-center gap-2">
+      <Link to="/Home" className="text-2xl md:text-3xl font-bold flex items-center gap-2">
         <Plane className="w-6 h-6 md:w-8 md:h-8 text-[#0E1C36]" />
         <span>Edu-Pilot</span>
       </Link>
@@ -59,7 +59,7 @@ function HomeHeader() {
         {["Home", "ChatBot", "Majors", "Assessment", "About"].map((text, index) => (
           <Link
             key={index}
-            to={`/${text.toLowerCase()}`}
+            to={`/${text}`}
             className="relative group overflow-hidden pb-1 px-1 transition-all duration-300 ease-in-out hover:text-[#142c5e] hover:font-bold"
           >
             {text}
@@ -70,7 +70,7 @@ function HomeHeader() {
 
       {/* Login Button - Desktop */}
       <Link
-        to="/login"
+        to="/Login"
         className="hidden md:flex relative h-10 px-4 items-center justify-center rounded-lg overflow-hidden bg-[#0E1C36] font-medium text-white shadow-md transition-all duration-300 hover:bg-transparent hover:text-[#0E1C36] border border-transparent hover:border-[#0E1C36]"
       >
         <span className="relative z-10">Login</span>
@@ -95,7 +95,7 @@ function HomeHeader() {
           {["Home", "ChatBot", "Majors","Assessment", "About"].map((text, index) => (
             <Link
               key={index}
-              to={`/${text.toLowerCase()}`}
+              to={`/${text}`}
               className="block py-2 text-lg font-medium hover:text-[#142c5e] transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -103,7 +103,7 @@ function HomeHeader() {
             </Link>
           ))}
           <Link
-            to="/login"
+            to="/Login"
             className="block mt-4 py-2 px-4 text-center rounded-lg bg-[#0E1C36] text-white font-medium shadow-md transition-colors hover:bg-[#142c5e]"
             onClick={() => setMobileMenuOpen(false)}
           >

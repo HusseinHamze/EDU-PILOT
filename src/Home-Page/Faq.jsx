@@ -68,7 +68,8 @@ export default function Faq() {
 
   return (
     <motion.section 
-      className="w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-12 md:py-16 lg:py-20 bg-[#AFCBFF] rounded-lg border border-[#0E1C36]"
+      id="faqs"
+      className="w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8 md:py-16 lg:py-20 bg-[#AFCBFF] rounded-lg border border-[#0E1C36]"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.5 }}

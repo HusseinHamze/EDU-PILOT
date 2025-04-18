@@ -29,7 +29,7 @@ export default function Hiw() {
   };
 
   return (
-    <section className="text-[#0E1C36] body-font min-h-screen flex items-center justify-center py-20">
+    <section id="hiw" className="text-[#0E1C36] body-font min-h-screen flex items-center justify-center">
       <div className="max-w-7xl w-full px-6 sm:px-8 mx-auto flex flex-col items-center">
         <motion.h1 
           className="text-3xl font-semibold mb-12 text-center"
