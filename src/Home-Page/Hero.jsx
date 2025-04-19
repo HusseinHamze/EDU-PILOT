@@ -13,7 +13,7 @@ export default function Hero() {
         className="basis-1/2 shrink-0 space-y-6"
       >
         <motion.h1 
-          className="text-5xl font-extrabold leading-tight"
+          className="text-5xl text-[#0E1C36] font-extrabold leading-tight"
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false, amount: 0.5 }}

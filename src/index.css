@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
 body{
     background-color: #AFCBFF;
     font-family: 'roboto',sans-serif;
@@ -7,3 +9,4 @@ body{
     margin: 0;
     padding: 0;
 }
+
