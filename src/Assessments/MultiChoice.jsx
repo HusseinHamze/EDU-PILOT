@@ -118,7 +118,7 @@ const MultiChoice = ({
               </div>
             </div>
             <span className="text-[#0E1C36] group-hover:text-[#142c5e] 
-              transition-all duration-200 hover:font-medium">
+              transition-all duration-200 hover:font-bold">
               {option}
             </span>
           </label>

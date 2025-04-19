@@ -84,14 +84,14 @@ export default function Range() {
                         className="range text-[#AFCBFF] w-full transition-all duration-300 ease-out"  
                     />
                 </div>
-                <div className="flex justify-between w-full px-4 mt-2 text-xs"> 
+                <div className="flex justify-between w-full px-4 mt-2 text-xs font-bold"> 
                     <span>|</span>
                     <span>|</span>
                     <span>|</span>
                     <span>|</span>
                     <span>|</span>
                 </div>
-                <div className="flex justify-between w-full px-4 mt-2 text-xs"> 
+                <div className="flex justify-between w-full px-4 mt-2 text-xs font-bold"> 
                     <span>1</span>
                     <span>2</span>
                     <span>3</span>
