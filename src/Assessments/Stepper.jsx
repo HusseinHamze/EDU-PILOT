@@ -64,10 +64,8 @@ export default function Stepper({ onComplete }) {
     };
 
     const handleStepClick = (index) => {
-        // Only allow navigation to completed steps or next in sequence
-        if (completedSections.includes(index) || index === currentStep + 1) {
-            setCurrentStep(index);
-        }
+        // Allow navigation to any step
+        setCurrentStep(index);
     };
 
     const markSectionComplete = () => {
@@ -99,80 +97,94 @@ export default function Stepper({ onComplete }) {
 
     return (
         <div className="w-full min-h-screen py-8 md:py-12 flex flex-col items-center mt-20 px-4">
-            {/* Stepper */}
+            
+            {/* Stepper*/}
             <motion.div 
-                className="relative flex justify-between items-center w-full max-w-4xl px-4 md:px-8 mb-12"
+                className="relative w-full max-w-4xl px-4 md:px-8 mb-12"
                 initial="hidden"
                 animate={loaded ? "visible" : "hidden"}
                 variants={containerVariants}
             >
-                {/* Progress line */}
-                <div className="absolute top-1/2 left-8 right-8 h-1 z-0 -translate-y-1/2 bg-gray-200 overflow-hidden">
-                    <motion.div 
-                        className="h-full bg-[#0E1C36]"
-                        initial={{ width: 0 }}
-                        animate={{ width: `${(currentStep / (sections.length - 1)) * 100}%` }}
-                        transition={{ duration: 0.8 }}
-                    />
+                {/* Stepper Wrapper - match circle height */}
+                <div className="relative w-full flex items-center" style={{ height: '4rem' }}> {/* 4rem = 64px for md:w-16/md:h-16 */}
+                    
+                    {/* Progress Line - behind the steps and centered */}
+                    <div className="absolute left-0 right-0 top-1/2 transform -translate-y-1/2 z-0 px-[6%]">
+                        <div className="w-full h-1 bg-gray-200 relative">
+                            <motion.div 
+                                className="absolute top-0 left-0 h-full bg-[#0E1C36]"
+                                initial={{ width: 0 }}
+                                animate={{ width: `${(currentStep / (sections.length - 1)) * 100}%` }}
+                                transition={{ duration: 0.8 }}
+                            />
+                        </div>
+                    </div>
+
+                    {/* Step Circles */}
+                    <div className="relative z-10 flex justify-between items-center w-full">
+                        {sections.map((section, index) => (
+                            <motion.div
+                                key={index}
+                                className="flex flex-col items-center"
+                                onClick={() => handleStepClick(index)}
+                                variants={itemVariants}
+                            >
+                                <motion.div
+                                    className={`w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 ${
+                                        completedSections.includes(index)
+                                            ? "bg-[#142c5e]"
+                                            : index <= currentStep
+                                            ? "bg-[#0E1C36]"
+                                            : "bg-white border-2 border-gray-300"
+                                    } ${index === currentStep ? "ring-4 ring-white scale-110" : ""}`}
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.95 }}
+                                >
+                                    {completedSections.includes(index) ? (
+                                        <CheckIcon className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                                    ) : (
+                                        <p className={`text-sm md:text-lg font-semibold ${
+                                            completedSections.includes(index) || index <= currentStep
+                                                ? "text-white" 
+                                                : "text-gray-400"
+                                        }`}>
+                                            {index + 1}
+                                        </p>
+                                    )}
+                                </motion.div>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
-                
-                {sections.map((section, index) => (
-                    <motion.div
-                        key={index}
-                        className="relative z-10"
-                        onClick={() => handleStepClick(index)}
-                        variants={itemVariants}
-                    >
-                        <motion.div
-                            className={`w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 ${
-                                index <= currentStep
-                                    ? completedSections.includes(index)
-                                        ? "bg-[#142c5e]"
-                                        : "bg-[#0E1C36]"
-                                    : "bg-white border-2 border-gray-300"
-                            } ${index === currentStep ? "ring-4 ring-white scale-110" : ""}`}
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            {completedSections.includes(index) ? (
-                                <CheckIcon className="w-5 h-5 md:w-6 md:h-6 text-white" />
-                            ) : (
-                                <p className={`text-sm md:text-lg font-semibold ${
-                                    index <= currentStep ? "text-white" : "text-gray-400"
-                                }`}>
-                                    {index + 1}
-                                </p>
-                            )}
-                        </motion.div>
-                    </motion.div>
-                ))}
             </motion.div>
+
+
 
             {/* Current Section Content */}
             <div className="w-full max-w-4xl bg-white rounded-xl shadow-md p-6 md:p-8 mb-8">
-            <AnimatePresence mode="wait">
-                <motion.div
-                    key={currentStep}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                >
-                    <motion.h2
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -20 }}
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={currentStep}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="flex items-center justify-center text-2xl md:text-3xl font-bold text-[#0E1C36] mb-10"
                     >
-                        {sections[currentStep].title}
-                    </motion.h2>
-                    <div className="min-h-[300px]">
-                        {sections[currentStep].component}
-                    </div>
-                </motion.div>
-            </AnimatePresence>
-             </div>
+                        <motion.h2
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -20 }}
+                            transition={{ duration: 0.3 }}
+                            className="flex items-center justify-center text-2xl md:text-3xl font-bold text-[#0E1C36] mb-10"
+                        >
+                            {sections[currentStep].title}
+                        </motion.h2>
+                        <div className="min-h-[300px]">
+                            {sections[currentStep].component}
+                        </div>
+                    </motion.div>
+                </AnimatePresence>
+            </div>
 
             {/* Navigation Controls */}
             <div className="w-full max-w-4xl flex justify-between">
