@@ -1,6 +1,4 @@
 import { useEffect, useRef } from "react";
-import NavBar from "../Multi-Use/NavBar";
-import Footer from "../Multi-Use/Footer";
 
 const Chatbot = () => {
   const initialized = useRef(false);
@@ -62,10 +60,8 @@ const Chatbot = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <NavBar />
-      
       <main className="flex-grow p-8">
-        <h1 className="text-3xl font-bold mb-4">Chat with Edu-Pilot</h1>
+        <h1 className="text-3xl font-bold mb-4 text-[#0E1C36]">Chat with Edu-Pilot</h1>
         {/* Add unique key to force DOM recreation */}
         <div 
           id="chatling-inline-bot" 
@@ -73,8 +69,6 @@ const Chatbot = () => {
           key={Date.now()} 
         />
       </main>
-
-      <Footer />
     </div>
   );
 };

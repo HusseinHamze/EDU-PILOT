@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <main className="flex flex-col md:flex-row items-center px-8 py-20 max-w-6xl mx-auto gap-12">
+    <main id="hero" className="flex flex-col md:flex-row items-center px-8 py-20 mt-18 max-w-6xl mx-auto gap-12">
       {/* Text Section */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
@@ -13,7 +13,7 @@ export default function Hero() {
         className="basis-1/2 shrink-0 space-y-6"
       >
         <motion.h1 
-          className="text-5xl font-extrabold leading-tight"
+          className="text-5xl text-[#0E1C36] font-extrabold leading-tight"
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false, amount: 0.5 }}

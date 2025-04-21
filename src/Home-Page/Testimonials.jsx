@@ -43,13 +43,14 @@ export default function Testimonials() {
 
   return (
     <motion.section 
+      id="testimonials"
       className="text-[#0E1C36] body-font py-20"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: false, amount: 0.2 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="container px-6 sm:px-8 py-24 mx-auto">
+      <div className="container px-6 sm:px-8 mx-auto">
         <motion.h1 
           className="text-3xl font-medium title-font text-[#0E1C36] mb-12 text-center"
           initial={{ opacity: 0, y: -20 }}

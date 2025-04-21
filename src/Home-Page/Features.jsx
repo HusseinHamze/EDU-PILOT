@@ -38,14 +38,14 @@ export default function Feature() {
   };
 
   return (
-    <section className="text-[#0E1C36] body-font py-20">
-      <div className="container px-5 py-24 mx-auto flex flex-wrap justify-center items-center">
+    <section id="features" className="text-[#0E1C36] body-font">
+      <div className="container px-4 py-8 mx-auto max-w-7xl flex flex-wrap justify-center items-center">
         {/* Features Header */}
         <motion.div 
-          className="w-full text-center mb-16"
+          className="w-full lg:w-2/3 text-center mx-auto mb-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.4 }}
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-3xl font-bold text-[#0E1C36]">Features</h1>
@@ -57,11 +57,11 @@ export default function Feature() {
         <div className="flex flex-wrap justify-center items-center w-full">
           {/* Left Side Image */}
           <motion.div 
-            className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden flex justify-center items-center"
+            className="lg:w-1/2 md:w-2/3 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden flex justify-center items-center"
             variants={imageVariants}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: false, amount: 0.4 }}
           >
             <motion.img
               alt="features"
@@ -74,15 +74,15 @@ export default function Feature() {
 
           {/* Features List */}
           <motion.div 
-            className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center"
+            className="flex flex-col flex-wrap lg:py-2 -mb-10 lg:w-1/2 md:w-2/3 lg:pl-8 lg:text-left text-center"
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: false, amount: 0.4 }}
           >
             {/* Feature 1: AI Recommendations */}
             <motion.div 
-              className="flex flex-col mb-10 lg:items-start items-center"
+              className="flex flex-col mb-6 lg:items-start items-center"
               variants={itemVariants}
             >
               <motion.div 
@@ -96,8 +96,8 @@ export default function Feature() {
                 </svg>
               </motion.div>
               <div className="flex-grow">
-                <h2 className="text-[#0E1C36] font-bold text-lg title-font mb-3">AI-Powered Recommendations</h2>
-                <p className="leading-relaxed opacity-80 text-base">
+                <h2 className="text-[#0E1C36] font-bold text-base title-font mb-3">AI-Powered Recommendations</h2>
+                <p className="leading-relaxed opacity-80 text-sm">
                   Our smart AI system analyzes your preferences, skills, and interests to suggest the most suitable college majors for you. It's a personalized career guidance experience.
                 </p>
               </div>
@@ -105,7 +105,7 @@ export default function Feature() {
 
             {/* Feature 2: Fast */}
             <motion.div 
-              className="flex flex-col mb-10 lg:items-start items-center"
+              className="flex flex-col mb-6 lg:items-start items-center"
               variants={itemVariants}
             >
               <motion.div 
@@ -118,8 +118,8 @@ export default function Feature() {
                 </svg>
               </motion.div>
               <div className="flex-grow">
-                <h2 className="text-[#0E1C36] text-lg title-font font-bold mb-3">Quick & Simple</h2>
-                <p className="leading-relaxed opacity-80 text-base">
+                <h2 className="text-[#0E1C36] text-base title-font font-bold mb-3">Quick & Simple</h2>
+                <p className="leading-relaxed opacity-80 text-sm">
                   The process is fast and simple! Complete the questionnaire in just a few minutes to receive personalized major recommendations based on your answers.
                 </p>
               </div>
@@ -127,7 +127,7 @@ export default function Feature() {
 
             {/* Feature 3: Personalized Insights */}
             <motion.div 
-              className="flex flex-col mb-10 lg:items-start items-center"
+              className="flex flex-col mb-6 lg:items-start items-center"
               variants={itemVariants}
             >
               <motion.div 
@@ -141,8 +141,8 @@ export default function Feature() {
                 </svg>
               </motion.div>
               <div className="flex-grow">
-                <h2 className="text-[#0E1C36] text-lg title-font font-bold mb-3">Personalized Insights</h2>
-                <p className="leading-relaxed opacity-80 text-base">
+                <h2 className="text-[#0E1C36] text-base title-font font-bold mb-3">Personalized Insights</h2>
+                <p className="leading-relaxed opacity-80 text-sm">
                   Our platform offers tailored insights based on your unique responses, ensuring that each recommendation aligns with your individual strengths, interests, and goals.
                 </p>
               </div>
@@ -150,7 +150,7 @@ export default function Feature() {
 
             {/* Feature 4: Free to Use */}
             <motion.div 
-              className="flex flex-col mb-10 lg:items-start items-center"
+              className="flex flex-col mb-6 lg:items-start items-center"
               variants={itemVariants}
             >
               <motion.div 
@@ -164,8 +164,8 @@ export default function Feature() {
                 </svg>
               </motion.div>
               <div className="flex-grow">
-                <h2 className="text-[#0E1C36] text-lg title-font font-bold mb-3">100% Free</h2>
-                <p className="leading-relaxed opacity-80 text-base">
+                <h2 className="text-[#0E1C36] text-base title-font font-bold mb-3">100% Free</h2>
+                <p className="leading-relaxed opacity-80 text-sm">
                   Edu-Pilot is completely free for all students! No hidden fees or costs, providing equal access to career guidance for everyone.
                 </p>
               </div>

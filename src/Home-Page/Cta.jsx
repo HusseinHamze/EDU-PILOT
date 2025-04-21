@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function Cta() {
   return (
     <motion.section 
-      className="text-center px-8 pb-20"
+      className="text-center px-8"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: false, amount: 0.3 }}

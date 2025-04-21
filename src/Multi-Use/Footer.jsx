@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Plane } from "lucide-react";
+import React from "react";
 
 export default function Footer() {
   const containerVariants = {
@@ -27,7 +28,7 @@ export default function Footer() {
 
   return (
     <motion.footer 
-      className="bg-[#0E1C36] text-white py-10 px-8"
+      className="bg-[#0E1C36] text-white py-10 px-8 mt-5"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: false, amount: 0.2 }}
@@ -56,6 +57,8 @@ export default function Footer() {
             transition={{ type: "spring", stiffness: 300 }}
           >
             Empowering students to make confident academic decisions.
+
+
           </motion.p>
         </motion.div>
 
@@ -65,19 +68,41 @@ export default function Footer() {
             className="text-lg font-semibold mb-2"
             whileHover={{ scale: 1.02 }}
           >
+
             Quick Links
           </motion.h4>
           <motion.ul className="space-y-1 text-sm text-gray-300">
-            {['Home', 'Assessment', 'FAQs', 'Contact'].map((link, index) => (
-              <motion.li 
+            {[
+              {name: 'Home', id: 'hero'},
+              {name: 'How It Works', id: 'hiw'},
+              {name: 'Features', id: 'features'},
+              {name: 'FAQs', id: 'faqs'},
+              {name: 'Testimonials', id: 'testimonials'}
+            ].map((link, index) => (
+              <motion.li
                 key={index}
-                whileHover={{ 
+                whileHover={{
                   x: 5,
                   color: "#ffffff"
                 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <a href="#" className="hover:underline">{link}</a>
+                 {/* Using an anchor tag for smooth scrolling to specific sections */}
+                <a
+                  href={`#${link.id}`}
+                  className="hover:underline"
+                  onClick={(e) => {
+                    // Prevent default anchor behavior
+                     e.preventDefault();
+                    document.getElementById(link.id)?.scrollIntoView({
+                      behavior: 'smooth',
+                       block: 'start'
+                       , duration: 3000 
+                    })
+                  }}
+                >
+                  {link.name}
+                </a>
               </motion.li>
             ))}
           </motion.ul>
@@ -86,6 +111,7 @@ export default function Footer() {
         {/* Contact Info */}
         <motion.div variants={itemVariants}>
           <motion.h4 
+
             className="text-lg font-semibold mb-2"
             whileHover={{ scale: 1.02 }}
           >
