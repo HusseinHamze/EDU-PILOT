@@ -308,7 +308,7 @@ function Login() {
           whileTap={{ scale: 0.98 }}
           animate={isLoading ? 'loading' : 'visible'}
           disabled={isLoading}
-          className="bg-[#AFCBFF] text-[#0E1C36] h-10 rounded-full font-bold text-sm hover:bg-[#0059fd] shadow-md transition mt-1 w-full"
+          className="bg-[#AFCBFF] text-[#0E1C36] h-10 rounded-full cursor-pointer font-bold text-sm hover:bg-[#0059fd] shadow-md transition mt-1 w-full"
         >
           {isLoading ? (
             <>
@@ -340,7 +340,7 @@ function Login() {
           onClick={toggleAuthMode}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-[#AFCBFF] text-[#0E1C36] h-7 px-3 rounded-full text-xs font-bold hover:bg-[#0059fd] shadow-md transition w-full sm:w-auto"
+          className="bg-[#AFCBFF] text-[#0E1C36] h-7 px-3 rounded-full cursor-pointer text-xs font-bold hover:bg-[#0059fd] shadow-md transition w-full sm:w-auto"
         >
           {isSignup ? 'Login' : 'Sign Up'}
         </motion.button>
