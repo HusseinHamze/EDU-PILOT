@@ -61,7 +61,7 @@ const Chatbot = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow p-8">
-        <h1 className="text-3xl font-bold mb-4 text-[#0E1C36]">Chat with Edu-Pilot</h1>
+        <h1 className="text-3xl font-bold mb-4 text-[#0E1C36] dark:text-white">Chat with Edu-Pilot</h1>
         {/* Add unique key to force DOM recreation */}
         <div 
           id="chatling-inline-bot" 

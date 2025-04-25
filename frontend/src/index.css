@@ -10,3 +10,10 @@ body{
     padding: 0;
 }
 
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #0E1C36;
+        background-image: radial-gradient(#AFCBFF 0.5px, #0E1C36 0.5px);
+    }
+}

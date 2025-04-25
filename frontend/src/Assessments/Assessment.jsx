@@ -1,15 +1,23 @@
+import { useState } from 'react';
 import NavBar from "../Multi-Use/NavBar";
 import Stepper from "./Stepper";
-import Progress from "./Progress";
+import Result from "./Result";
 
-export default function Assessment(){
+export default function Assessment() {
+    const [showResults, setShowResults] = useState(false);
 
-    return(
+    const handleAssessmentComplete = () => {
+        setShowResults(true);
+    };
+
+    return (
         <>
-        <Progress/>
-        <NavBar/>
-        <Stepper/>
+            <NavBar />
+            {!showResults ? (
+                <Stepper onComplete={handleAssessmentComplete} />
+            ) : (
+                <Result />
+            )}
         </>
-    )
-    
+    );
 }

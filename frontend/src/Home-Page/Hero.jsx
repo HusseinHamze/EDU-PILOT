@@ -13,7 +13,7 @@ export default function Hero() {
         className="basis-1/2 shrink-0 space-y-6"
       >
         <motion.h1 
-          className="text-5xl text-[#0E1C36] font-extrabold leading-tight"
+          className="text-5xl text-[#0E1C36] dark:text-white font-extrabold leading-tight"
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false, amount: 0.5 }}
@@ -22,7 +22,7 @@ export default function Hero() {
           Choose the Right College Major for You
         </motion.h1>
         <motion.p 
-          className="text-lg text-[#0E1C36] opacity-80"
+          className="text-lg text-[#0E1C36]/80 dark:text-white/80"
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false, amount: 0.5 }}
@@ -33,7 +33,7 @@ export default function Hero() {
           decision with confidence.
         </motion.p>
         <motion.button 
-          className="px-7 py-2 text-lg rounded-xl font-semibold bg-[#0E1C36] text-white hover:bg-[#142c5e] cursor-pointer shadow-lg"
+          className="px-7 py-2 text-lg rounded-xl font-semibold bg-[#0E1C36] text-white hover:bg-[#142c5e] dark:bg-[#AFCBFF] dark:text-[#0E1C36] dark:hover:text-[#AFCBFF] cursor-pointer shadow-lg"
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false, amount: 0.5 }}

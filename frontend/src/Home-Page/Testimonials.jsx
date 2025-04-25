@@ -75,7 +75,7 @@ export default function Testimonials() {
             whileHover="hover"
           >
             <motion.div 
-              className="h-full p-8 rounded-lg bg-[#E6F0FF] border border-[#0E1C36]"
+              className="h-full p-8 rounded-lg bg-[#E6F0FF] border border-[#0E1C36] dark:border-[#AFCBFF]"
               whileHover={{ boxShadow: "0 10px 25px -5px rgba(14, 28, 54, 0.1)" }}
               transition={{ duration: 0.3 }}
             >
@@ -101,7 +101,7 @@ export default function Testimonials() {
             whileHover="hover"
           >
             <motion.div 
-              className="h-full p-8 rounded-lg bg-[#E6F0FF] border border-[#0E1C36]"
+              className="h-full p-8 rounded-lg bg-[#E6F0FF] border border-[#0E1C36] dark:border-[#AFCBFF]"
               whileHover={{ boxShadow: "0 10px 25px -5px rgba(14, 28, 54, 0.1)" }}
               transition={{ duration: 0.3 }}
             >
