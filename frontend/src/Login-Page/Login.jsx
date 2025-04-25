@@ -160,7 +160,7 @@ function Login() {
     {/* Form Side */}
     <motion.form
       onSubmit={handleSubmit}
-      className="flex flex-col justify-between items-center bg-[#0E1C36] w-full md:w-1/2 p-4 sm:p-6"
+      className="flex flex-col justify-between items-center bg-[#0E1C36] w-full md:w-1/2 p-4 sm:p-6 dark:bg-[#142c5e]"
       variants={formSideVariants}
     >
       <motion.div

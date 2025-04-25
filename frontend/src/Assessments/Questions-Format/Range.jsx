@@ -98,10 +98,6 @@ export default function Range() {
                     <span>4</span>
                     <span>5</span>
                 </div>
-
-                <div className="mt-4 text-sm text-center">
-                    Current Confidence Level: <span className="font-medium">{Math.round(value / 25) + 1}</span> / 5
-                </div>
             </div>
         </div>
     );

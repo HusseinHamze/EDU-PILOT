@@ -38,7 +38,7 @@ export default function Feature() {
   };
 
   return (
-    <section id="features" className="text-[#0E1C36] body-font">
+    <section id="features" className="text-[#0E1C36] dark:text-white body-font">
       <div className="container px-4 py-8 mx-auto max-w-7xl flex flex-wrap justify-center items-center">
         {/* Features Header */}
         <motion.div 
@@ -48,8 +48,8 @@ export default function Feature() {
           viewport={{ once: false, amount: 0.4 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-3xl font-bold text-[#0E1C36]">Features</h1>
-          <p className="text-sm text-[#0E1C36]/80 mt-2">
+          <h1 className="text-3xl font-bold text-[#0E1C36] dark:text-white">Features</h1>
+          <p className="text-sm text-[#0E1C36] dark:text-white opacity-80 mt-2">
             Discover the unique features that make Edu-Pilot the best choice for career guidance.
           </p>
         </motion.div>
@@ -96,7 +96,7 @@ export default function Feature() {
                 </svg>
               </motion.div>
               <div className="flex-grow">
-                <h2 className="text-[#0E1C36] font-bold text-base title-font mb-3">AI-Powered Recommendations</h2>
+                <h2 className="text-[#0E1C36] dark:text-white font-bold text-base title-font mb-3">AI-Powered Recommendations</h2>
                 <p className="leading-relaxed opacity-80 text-sm">
                   Our smart AI system analyzes your preferences, skills, and interests to suggest the most suitable college majors for you. It's a personalized career guidance experience.
                 </p>
@@ -118,7 +118,7 @@ export default function Feature() {
                 </svg>
               </motion.div>
               <div className="flex-grow">
-                <h2 className="text-[#0E1C36] text-base title-font font-bold mb-3">Quick & Simple</h2>
+                <h2 className="text-[#0E1C36] dark:text-white text-base title-font font-bold mb-3">Quick & Simple</h2>
                 <p className="leading-relaxed opacity-80 text-sm">
                   The process is fast and simple! Complete the questionnaire in just a few minutes to receive personalized major recommendations based on your answers.
                 </p>
@@ -141,7 +141,7 @@ export default function Feature() {
                 </svg>
               </motion.div>
               <div className="flex-grow">
-                <h2 className="text-[#0E1C36] text-base title-font font-bold mb-3">Personalized Insights</h2>
+                <h2 className="text-[#0E1C36] dark:text-white text-base title-font font-bold mb-3">Personalized Insights</h2>
                 <p className="leading-relaxed opacity-80 text-sm">
                   Our platform offers tailored insights based on your unique responses, ensuring that each recommendation aligns with your individual strengths, interests, and goals.
                 </p>
@@ -164,7 +164,7 @@ export default function Feature() {
                 </svg>
               </motion.div>
               <div className="flex-grow">
-                <h2 className="text-[#0E1C36] text-base title-font font-bold mb-3">100% Free</h2>
+                <h2 className="text-[#0E1C36] dark:text-white text-base title-font font-bold mb-3">100% Free</h2>
                 <p className="leading-relaxed opacity-80 text-sm">
                   Edu-Pilot is completely free for all students! No hidden fees or costs, providing equal access to career guidance for everyone.
                 </p>

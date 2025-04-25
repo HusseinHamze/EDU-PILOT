@@ -3,19 +3,21 @@ import Home from "./Home-Page/Home";
 import Login from './Login-Page/Login';
 import Chatbot from './Chatbot/Chatbot';
 import Assessment from './Assessments/Assessment';
-import Majors from './Majors/Majors';
+import About from './About/About';
+import ScrollToTop from './Multi-Use/ScrollToTop';
 function App() {
 
   return (
     <>
     <BrowserRouter>
+    <ScrollToTop/>
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/Home' element={<Home/>}/>
       <Route path='/Login' element={<Login/>}/>
       <Route path='/Chatbot' element={<Chatbot/>}/>
       <Route path='/Assessment' element={<Assessment/>}/>
-      <Route path='/Majors' element={<Majors/>}/>
+      <Route path='/About' element={<About/>}/>
 
     </Routes>
     </BrowserRouter>

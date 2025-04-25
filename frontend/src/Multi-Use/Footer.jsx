@@ -28,7 +28,7 @@ export default function Footer() {
 
   return (
     <motion.footer 
-      className="bg-[#0E1C36] text-white py-10 px-8 mt-5"
+      className="bg-[#0E1C36] text-white py-10 px-8 mt-5 dark:bg-[#AFCBFF] dark:text-[#0E1C36]"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: false, amount: 0.2 }}
@@ -48,11 +48,11 @@ export default function Footer() {
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <Plane className="w-8 h-8 text-white" />
+            <Plane className="w-8 h-8 text-white dark:text-[#0E1C36]" />
             <span>Edu-Pilot</span>
           </motion.div>
           <motion.p 
-            className="text-sm text-gray-300"
+            className="text-sm text-gray-300 dark:text-[#0E1C36]/80"
             whileHover={{ x: 5 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
@@ -71,7 +71,7 @@ export default function Footer() {
 
             Quick Links
           </motion.h4>
-          <motion.ul className="space-y-1 text-sm text-gray-300">
+          <motion.ul className="space-y-1 text-sm ">
             {[
               {name: 'Home', id: 'hero'},
               {name: 'How It Works', id: 'hiw'},
@@ -83,14 +83,13 @@ export default function Footer() {
                 key={index}
                 whileHover={{
                   x: 5,
-                  color: "#ffffff"
                 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                  {/* Using an anchor tag for smooth scrolling to specific sections */}
                 <a
                   href={`#${link.id}`}
-                  className="hover:underline"
+                  className="hover:underline hover:text-white text-gray-300 dark:text-[#0E1C36]/80"
                   onClick={(e) => {
                     // Prevent default anchor behavior
                      e.preventDefault();
@@ -122,15 +121,15 @@ export default function Footer() {
             whileHover={{ x: 5 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <p className="text-sm text-gray-300">Email: support@edupilots.com</p>
-            <p className="text-sm text-gray-300">Phone: +123 456 7890</p>
+            <p className="text-sm text-gray-300 dark:text-[#0E1C36]/80">Email: support@edupilots.com</p>
+            <p className="text-sm text-gray-300 dark:text-[#0E1C36]/80">Phone: +123 456 7890</p>
           </motion.div>
         </motion.div>
       </motion.div>
 
       {/* Copyright */}
       <motion.div 
-        className="text-center text-sm text-gray-400 mt-10"
+        className="text-center text-sm text-gray-400 mt-10 dark:text-[#0E1C36]/60"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: false, amount: 0.2 }}

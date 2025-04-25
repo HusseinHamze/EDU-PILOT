@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import NavBar from "../Multi-Use/NavBar";
 import Stepper from "./Stepper";
-import Progress from "./Progress";
 import Result from "./Result";
 
 export default function Assessment() {
@@ -14,7 +13,6 @@ export default function Assessment() {
     return (
         <>
             <NavBar />
-            {!showResults && <Progress />}
             {!showResults ? (
                 <Stepper onComplete={handleAssessmentComplete} />
             ) : (
