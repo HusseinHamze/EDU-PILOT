@@ -69,7 +69,7 @@ export default function Stepper({ onComplete }) {
     }
 
     return (
-        <div className="w-full min-h-screen py-8 flex flex-col items-center mt-20 px-4">
+        <div className="w-full min-h-screen py-8 flex flex-col items-center pt-30 px-4">
             {/* Stepper */}
             <motion.div
                 className="relative w-full max-w-4xl px-4 md:px-8 mb-12"
