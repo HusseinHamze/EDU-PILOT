@@ -97,7 +97,7 @@ export default function Result() {
         {/* Call to Action Buttons */}
         <div className={`flex flex-col md:flex-row justify-center gap-4 mb-16 animate-fadeIn delay-500 relative z-10`}>
           <button className="bg-[#0E1C36] hover:bg-[#142c5e] text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:shadow-lg cursor-pointer">
-            Explore Majors
+            Explore Universities
           </button>
           <button className="bg-[#AFCBFF] hover:bg-[#8fb6ff] text-[#0E1C36] px-8 py-3 rounded-full border border-[#0E1C36] font-medium transition-all duration-300 hover:shadow-lg hover:border-transparent cursor-pointer">
             Retake Assessment

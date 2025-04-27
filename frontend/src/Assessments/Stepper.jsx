@@ -156,7 +156,7 @@ export default function Stepper({ onComplete }) {
                     disabled={currentStep === 0}
                     className={`flex items-center px-6 py-3 rounded-lg cursor-pointer
                         ${currentStep === 0 ? 'bg-gray-200 text-gray-400'
-                            : 'bg-[#0E1C36] dark:bg-[#AFCBFF] text-white dark:text-[#0E1C36] hover:bg-[#142c5e] transition-all duration-300'}`}
+                            : 'bg-[#0E1C36] dark:bg-[#AFCBFF] text-white dark:text-[#0E1C36] hover:bg-[#142c5e] dark:hover:text-[#AFCBFF] transition-all duration-300'}`}
                 >
                     <ChevronLeft className="mr-2" />
                     Previous
@@ -164,7 +164,7 @@ export default function Stepper({ onComplete }) {
 
                 <button
                     onClick={handleNext}
-                    className="flex items-center px-6 py-3 bg-[#0E1C36] dark:bg-[#AFCBFF] text-white dark:text-[#0E1C36] rounded-lg hover:bg-[#142c5e] transition-all duration-300"
+                    className="flex items-center px-6 py-3 bg-[#0E1C36] dark:bg-[#AFCBFF] text-white dark:text-[#0E1C36] cursor-pointer rounded-lg hover:bg-[#142c5e] dark:hover:text-[#AFCBFF] transition-all duration-300"
                 >
                     {currentStep === sections.length - 1 ? 'Complete Assessment' : 'Next Section'}
                     <ChevronRight className="ml-2" />
