@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function Cta() {
+  const navigate = useNavigate();
+
+  const handleAssessmentClick = () => {
+    navigate('/assessment');
+  };
+
   return (
     <motion.section 
       className="text-center px-8"
@@ -71,6 +78,7 @@ export default function Cta() {
           scale: 0.95,
           boxShadow: "0 2px 5px rgba(14, 28, 54, 0.3)"
         }}
+        onClick={handleAssessmentClick}
       >
         Start Your Assessment
       </motion.button>

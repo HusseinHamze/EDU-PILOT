@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate('/assessment-gateway');
+  };
+
   return (
     <main id="hero" className="flex flex-col md:flex-row items-center px-8 py-20 mt-18 max-w-6xl mx-auto gap-12">
       {/* Text Section */}
@@ -40,6 +47,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.6 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          onClick={handleGetStarted}
         >
           Get Started
         </motion.button>

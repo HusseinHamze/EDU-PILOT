@@ -21,18 +21,12 @@ export default function Stepper({ onComplete }) {
 
     const [currentStep, setCurrentStep] = useState(0);
     const [completedSections, setCompletedSections] = useState([]);
-    const [progress, setProgress] = useState(0);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        setLoaded(true); // Trigger animation on mount only
+        setLoaded(true);
     }, []);
-
-    useEffect(() => {
-        const completedCount = completedSections.length;
-        setProgress((completedCount / sections.length) * 100);
-    }, [completedSections, sections.length]);
 
     const handleNext = () => {
         if (!completedSections.includes(currentStep)) {
@@ -77,7 +71,7 @@ export default function Stepper({ onComplete }) {
                 animate={loaded ? "visible" : "hidden"}
                 variants={{
                     hidden: { opacity: 0 },
-                    visible: { opacity: 1, transition: { staggerChildren: 0.1 } } // Slightly slower stagger
+                    visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
                 }}
             >
                 {/* Progress Line */}
@@ -88,7 +82,7 @@ export default function Stepper({ onComplete }) {
                                 className="absolute top-0 left-0 h-full bg-[#0E1C36] dark:bg-[#AFCBFF]"
                                 initial={{ width: 0 }}
                                 animate={{ width: `${(currentStep / (sections.length - 1)) * 100}%` }}
-                                transition={{ duration: 0.8 }} // Slower progress line
+                                transition={{ duration: 0.8 }}
                             />
                         </div>
                     </div>
@@ -102,17 +96,17 @@ export default function Stepper({ onComplete }) {
                                 onClick={() => handleStepClick(index)}
                                 variants={{
                                     hidden: { y: 10, opacity: 0 },
-                                    visible: { y: 0, opacity: 1, transition: { duration: 0.4 } } // Slower circle appearance
+                                    visible: { y: 0, opacity: 1, transition: { duration: 0.4 } }
                                 }}
                             >
                                 <motion.div
-                                    className={`w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-500 // Slower hover/tap
+                                    className={`w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-500
                                         ${completedSections.includes(index) ? "bg-[#142c5e]"
                                             : index <= currentStep ? "bg-[#0E1C36] dark:bg-[#AFCBFF]"
                                                 : "bg-white border-2 border-gray-300"}
                                         ${index === currentStep ? "ring-4 ring-white scale-110" : ""}`}
-                                    whileHover={{ scale: 1.08, transition: { duration: 0.3 } }} // Adjust hover speed
-                                    whileTap={{ scale: 0.95, transition: { duration: 0.2 } }}   // Adjust tap speed
+                                    whileHover={{ scale: 1.08, transition: { duration: 0.3 } }}
+                                    whileTap={{ scale: 0.95, transition: { duration: 0.2 } }}
                                 >
                                     {completedSections.includes(index) ? (
                                         <CheckIcon className="w-5 h-5 md:w-6 md:h-6 text-white" />
@@ -137,7 +131,7 @@ export default function Stepper({ onComplete }) {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5 }} // Slower content fade
+                        transition={{ duration: 0.5 }}
                     >
                         <h2 className="text-2xl md:text-3xl font-bold text-center text-[#0E1C36] mb-10">
                             {sections[currentStep].title}
