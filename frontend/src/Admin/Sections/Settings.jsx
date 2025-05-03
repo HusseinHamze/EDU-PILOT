@@ -89,9 +89,6 @@ const Settings = () => {
                         <button className="w-full bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
                             Change Password
                         </button>
-                        <button className="w-full bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
-                            Two-Factor Authentication
-                        </button>
                     </div>
                 </div>
             </div>

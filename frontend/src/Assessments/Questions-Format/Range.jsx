@@ -62,17 +62,17 @@ export default function Range() {
     return (
         <div 
             ref={rangeRef}
-            className="card flex justify-center items-center mt-5 w-full bg-white border border-[#0E1C36] rounded-xl p-6 transition-all duration-500 ease-out"
+            className="card flex justify-center items-center mt-5 w-full bg-white dark:bg-gray-800 border border-[#0E1C36] dark:border-[#AFCBFF] rounded-xl p-6 transition-all duration-500 ease-out"
             style={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? 'translateY(0)' : 'translateY(20px)'
             }}
         >
-            <h3 className="text-lg font-semibold text-[#0E1C36] mb-10">
+            <h3 className="text-lg font-semibold text-[#0E1C36] dark:text-white mb-10">
                 How confident are you in your academic abilities?
             </h3>
 
-            <div className="w-[70%] text-[#0E1C36]">
+            <div className="w-[70%] text-[#0E1C36] dark:text-white">
                 <div className="px-4 w-full">
                     <input
                         type="range"

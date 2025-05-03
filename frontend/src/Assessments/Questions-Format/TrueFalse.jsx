@@ -45,14 +45,14 @@ const TrueFalse = ({
   return (
     <div 
       ref={componentRef}
-      className="card flex flex-col justify-start items-start mt-5 w-full bg-white border border-[#0E1C36] rounded-xl p-6
+      className="card flex flex-col justify-start items-start mt-5 w-full bg-white dark:bg-gray-800 border border-[#0E1C36] dark:border-[#AFCBFF] rounded-xl p-6
         transition-all duration-500 ease-out"
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? 'translateY(0)' : 'translateY(20px)'
       }}
     >
-      <h3 className="text-lg font-bold text-[#0E1C36] mb-4
+      <h3 className="text-lg font-bold text-[#0E1C36] dark:text-white mb-4
         transition-all duration-300 delay-75
         group-hover:scale-[1.02]">
         {question}
@@ -92,7 +92,7 @@ const TrueFalse = ({
                 )}
               </div>
             </div>
-            <span className="text-[#0E1C36] hover:text-[#142c5e] 
+            <span className="text-[#0E1C36] dark:text-white hover:text-[#142c5e] dark:hover:text-[#AFCBFF]
               transition-all duration-200 hover:font-bold">
               {option}
             </span>

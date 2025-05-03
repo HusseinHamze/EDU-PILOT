@@ -51,9 +51,6 @@ const Majors = () => {
         <div className="p-6">
             <div className="flex justify-between items-center mb-6">
                 <h1 className="text-2xl font-bold">Majors Management</h1>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                    Add New Major
-                </button>
             </div>
             
             <div className="mb-6">
@@ -93,10 +90,6 @@ const Majors = () => {
                         <div>
                             <p className="text-sm text-gray-500">Most Popular</p>
                             <p className="text-lg font-medium">Computer Science</p>
-                        </div>
-                        <div>
-                            <p className="text-sm text-gray-500">Average GPA Requirement</p>
-                            <p className="text-lg font-medium">2.8</p>
                         </div>
                     </div>
                 </div>

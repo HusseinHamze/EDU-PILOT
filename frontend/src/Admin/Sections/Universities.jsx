@@ -55,9 +55,6 @@ const Universities = () => {
         <div className="p-6">
             <div className="flex justify-between items-center mb-6">
                 <h1 className="text-2xl font-bold">Universities Management</h1>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                    Add New University
-                </button>
             </div>
             
             <div className="mb-6">
@@ -79,28 +76,6 @@ const Universities = () => {
                         <div>
                             <p className="text-sm text-gray-500">Top 10 Universities</p>
                             <p className="text-2xl font-bold">10</p>
-                        </div>
-                        <div>
-                            <p className="text-sm text-gray-500">Average Acceptance Rate</p>
-                            <p className="text-2xl font-bold">15%</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-                    <h2 className="text-lg font-semibold mb-4">Top Locations</h2>
-                    <div className="space-y-2">
-                        <div className="flex items-center justify-between p-2 hover:bg-gray-50 dark:hover:bg-gray-700 rounded">
-                            <span>California</span>
-                            <span className="text-gray-500">12 Universities</span>
-                        </div>
-                        <div className="flex items-center justify-between p-2 hover:bg-gray-50 dark:hover:bg-gray-700 rounded">
-                            <span>Massachusetts</span>
-                            <span className="text-gray-500">8 Universities</span>
-                        </div>
-                        <div className="flex items-center justify-between p-2 hover:bg-gray-50 dark:hover:bg-gray-700 rounded">
-                            <span>New York</span>
-                            <span className="text-gray-500">6 Universities</span>
                         </div>
                     </div>
                 </div>

@@ -72,28 +72,28 @@ export default function Result() {
               }`}
             >
               {/* Front Side */}
-              <div className="absolute w-full h-full backface-hidden bg-[#f5f5f5] rounded-2xl p-6 border-2 border-[#c3c6ce] flex flex-col transition-all duration-600 ease-out overflow-visible group-hover:border-[#0E1C36] group-hover:shadow-[0_4px_18px_0_rgba(0,0,0,0.25)]">
+              <div className="absolute w-full h-full backface-hidden bg-[#f5f5f5] dark:bg-gray-800 rounded-2xl p-6 border-2 border-[#c3c6ce] flex flex-col transition-all duration-600 ease-out overflow-visible group-hover:border-[#0E1C36] dark:group-hover:border-[#AFCBFF] group-hover:shadow-[0_4px_18px_0_rgba(0,0,0,0.25)]">
                 <div className="h-full flex flex-col gap-2">
-                  <h2 className="text-2xl font-bold text-[#0E1C36] mb-8 text-center">
+                  <h2 className="text-2xl font-bold text-[#0E1C36] dark:text-white mb-8 text-center">
                     {major.name}
                   </h2>
-                  <p className="text-[#0E1C36]/70 text-center mb-4 flex-grow px-2">
+                  <p className="text-[#0E1C36]/70 dark:text-white/70 text-center mb-4 flex-grow px-2">
                     {major.description}
                   </p>
                   <div className="w-full mt-auto mb-7">
                     <div className="w-full bg-[#AFCBFF]/30 rounded-full h-2.5 mb-2">
                       <div 
-                        className="bg-[#142c5e] h-2.5 rounded-full" 
+                        className="bg-[#142c5e] dark:bg-[#AFCBFF]/80 h-2.5 rounded-full" 
                         style={{ width: `${major.percentage}%` }}
                       ></div>
                     </div>
-                    <span className="text-[#142c5e] font-bold text-lg block text-center">
+                    <span className="text-[#142c5e] dark:text-[#AFCBFF] font-bold text-lg block text-center">
                       {major.percentage}% Match
                     </span>
                   </div>
                   <button 
                     onClick={() => toggleFlip(index)}
-                    className="absolute left-1/2 bottom-0 w-[60%] bg-[#0E1C36] text-white font-medium py-2 px-4 rounded-3xl transform -translate-x-1/2 translate-y-[125%] opacity-0 transition-all duration-600 ease-out group-hover:translate-y-[50%] group-hover:opacity-100 hover:bg-[#142c5e] cursor-pointer"
+                    className="absolute left-1/2 bottom-0 w-[60%] bg-[#0E1C36] dark:bg-[#AFCBFF] text-white dark:text-[#0E1C36] font-medium py-2 px-4 rounded-3xl transform -translate-x-1/2 translate-y-[125%] opacity-0 transition-all duration-600 ease-out group-hover:translate-y-[50%] group-hover:opacity-100 hover:bg-[#142c5e] dark:hover:bg-[#7caaff] cursor-pointer"
                   >
                     Learn More
                   </button>
@@ -101,26 +101,26 @@ export default function Result() {
               </div>
 
               {/* Back Side */}
-              <div className="absolute w-full h-full backface-hidden bg-[#f5f5f5] rounded-2xl p-6 border-2 border-[#c3c6ce] transform rotate-y-180 flex flex-col transition-all duration-600 ease-out overflow-visible group-hover:border-[#0E1C36] group-hover:shadow-[0_4px_18px_0_rgba(0,0,0,0.25)]">
-                <h3 className="text-xl font-bold text-[#0E1C36] mb-4 text-center">
+              <div className="absolute w-full h-full backface-hidden bg-[#f5f5f5] dark:bg-gray-800 rounded-2xl p-6 border-2 border-[#c3c6ce] transform rotate-y-180 flex flex-col transition-all duration-600 ease-out overflow-visible group-hover:border-[#0E1C36] dark:group-hover:border-[#AFCBFF] group-hover:shadow-[0_4px_18px_0_rgba(0,0,0,0.25)]">
+                <h3 className="text-xl font-bold text-[#0E1C36] dark:text-white mb-4 text-center">
                   More About {major.name}
                 </h3>
                 <div className="flex-grow space-y-3">
-                  <p className="text-[#0E1C36]/70">
+                  <p className="text-[#0E1C36]/70 dark:text-white/70">
                     📈 Average Starting Salary: {major.details.salary}
                   </p>
-                  <p className="text-[#0E1C36]/70">
+                  <p className="text-[#0E1C36]/70 dark:text-white/70">
                     📚 Top Courses:
                   </p>
                   <ul className="list-disc list-inside pl-4">
                     {major.details.courses.map((course, i) => (
-                      <li key={i} className="text-[#0E1C36]/70">{course}</li>
+                      <li key={i} className="text-[#0E1C36]/70 dark:text-white/70">{course}</li>
                     ))}
                   </ul>
                 </div>
                 <button 
                   onClick={() => toggleFlip(index)}
-                  className="mt-4 w-full bg-[#0E1C36] text-white py-2 rounded-full hover:bg-[#142c5e] cursor-pointer transition-colors"
+                  className="mt-4 w-full bg-[#0E1C36] dark:bg-[#AFCBFF] text-white dark:text-[#0E1C36] py-2 rounded-full hover:bg-[#142c5e] dark:hover:bg-[#7caaff] cursor-pointer transition-colors"
                 >
                   Back to Overview
                 </button>
@@ -144,7 +144,7 @@ export default function Result() {
             {orderedMajors.map((major, index) => (
               <div 
                 key={index}
-                className="group bg-white dark:bg-[#0E1C36]/20 rounded-xl p-6 shadow-md border border-[#c3c6ce] dark:border-[#AFCBFF]/20 transition-all duration-300 hover:border-[#0E1C36] hover:dark:border-[#AFCBFF] hover:shadow-lg hover:-translate-y-1"
+                className="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border border-[#c3c6ce] dark:border-[#AFCBFF]/20 transition-all duration-300 hover:border-[#0E1C36] hover:dark:border-[#AFCBFF] hover:shadow-lg hover:-translate-y-1"
               >
                 <h3 className="text-xl font-bold text-[#0E1C36] dark:text-white mb-4 text-center transition-colors duration-300 group-hover:text-[#142c5e] dark:group-hover:text-[#AFCBFF]">
                   {major.name}

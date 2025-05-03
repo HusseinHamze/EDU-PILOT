@@ -112,7 +112,7 @@ export default function Stepper({ onComplete }) {
                                         <CheckIcon className="w-5 h-5 md:w-6 md:h-6 text-white" />
                                     ) : (
                                         <p className={`text-sm md:text-lg font-semibold
-                                            ${index <= currentStep ? "text-white" : "text-gray-400"}`}>
+                                            ${index <= currentStep ? "text-white dark:text-[#0E1C36]" : "text-gray-400"}`}>
                                             {index + 1}
                                         </p>
                                     )}
@@ -124,7 +124,7 @@ export default function Stepper({ onComplete }) {
             </motion.div>
 
             {/* Section Content */}
-            <div className="w-full max-w-4xl bg-white rounded-xl shadow-md p-6 md:p-8 mb-8 min-h-[300px]">
+            <div className="w-full max-w-4xl bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 md:p-8 mb-8 min-h-[300px]">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={currentStep}
@@ -133,7 +133,7 @@ export default function Stepper({ onComplete }) {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <h2 className="text-2xl md:text-3xl font-bold text-center text-[#0E1C36] mb-10">
+                        <h2 className="text-2xl md:text-3xl font-bold text-center text-[#0E1C36] dark:text-white mb-10">
                             {sections[currentStep].title}
                         </h2>
                         <Suspense fallback={<div className="text-center">Loading...</div>}>

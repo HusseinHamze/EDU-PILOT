@@ -54,10 +54,7 @@ const Assessment = () => {
     return (
         <div className="p-6">
             <div className="flex justify-between items-center mb-6">
-                <h1 className="text-2xl font-bold">Assessment Results</h1>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                    Create New Assessment
-                </button>
+                <h1 className="text-2xl font-bold">Assessment Management</h1>
             </div>
             
             <div className="mb-6">
@@ -73,8 +70,8 @@ const Assessment = () => {
                     <h2 className="text-lg font-semibold mb-4">Assessment Statistics</h2>
                     <div className="space-y-4">
                         <div>
-                            <p className="text-sm text-gray-500">Total Assessments</p>
-                            <p className="text-2xl font-bold">150</p>
+                            <p className="text-sm text-gray-500">Total Qustions</p>
+                            <p className="text-2xl font-bold">38</p>
                         </div>
                         <div>
                             <p className="text-sm text-gray-500">Completed Today</p>
@@ -82,7 +79,7 @@ const Assessment = () => {
                         </div>
                         <div>
                             <p className="text-sm text-gray-500">Average Completion Time</p>
-                            <p className="text-2xl font-bold">25 min</p>
+                            <p className="text-2xl font-bold">15 min</p>
                         </div>
                     </div>
                 </div>
