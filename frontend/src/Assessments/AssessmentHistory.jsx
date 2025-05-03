@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import PersonalityType from "./PersonalityType";
 
 export default function AssessmentHistory() {
   const navigate = useNavigate();
@@ -9,28 +10,37 @@ export default function AssessmentHistory() {
     {
       id: 1,
       date: "2024-03-15",
-      suggestedMajor: "Computer Science",
+      recommendedMajors: [
+        { name: "Computer Science", match: 95 },
+        { name: "Software Engineering", match: 92 },
+        { name: "Data Science", match: 88 }
+      ],
       recommendedUniversities: ["MIT", "Stanford", "UC Berkeley"],
-      interests: ["Programming", "Problem Solving", "Mathematics"],
-      skills: ["Analytical Thinking", "Creativity", "Teamwork"],
+      personalityType: "Analytical Thinker",
       score: 92
     },
     {
       id: 2,
       date: "2024-02-28",
-      suggestedMajor: "Business Administration",
+      recommendedMajors: [
+        { name: "Business Administration", match: 94 },
+        { name: "Finance", match: 90 },
+        { name: "Marketing", match: 85 }
+      ],
       recommendedUniversities: ["Harvard", "Wharton", "NYU Stern"],
-      interests: ["Leadership", "Finance", "Marketing"],
-      skills: ["Communication", "Strategic Planning", "Decision Making"],
+      personalityType: "Strategic Leader",
       score: 88
     },
     {
       id: 3,
       date: "2024-01-10",
-      suggestedMajor: "Psychology",
+      recommendedMajors: [
+        { name: "Psychology", match: 93 },
+        { name: "Sociology", match: 89 },
+        { name: "Social Work", match: 86 }
+      ],
       recommendedUniversities: ["Yale", "Columbia", "UCLA"],
-      interests: ["Human Behavior", "Research", "Counseling"],
-      skills: ["Empathy", "Critical Thinking", "Observation"],
+      personalityType: "Compassionate Helper",
       score: 85
     }
   ];
@@ -74,7 +84,7 @@ export default function AssessmentHistory() {
             <div className="flex justify-between items-start mb-4">
               <div>
                 <h2 className="text-xl font-semibold text-[#0E1C36] dark:text-white">
-                  {assessment.suggestedMajor}
+                  Assessment #{assessment.id}
                 </h2>
                 <p className="text-gray-500 dark:text-gray-400">
                   Completed on {assessment.date}
@@ -93,12 +103,39 @@ export default function AssessmentHistory() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div>
+                <h3 className="text-lg font-medium text-[#0E1C36] dark:text-white mb-2">
+                  Recommended Majors
+                </h3>
+                <ul className="space-y-3">
+                  {assessment.recommendedMajors.map((major, i) => (
+                    <li key={i} className="flex flex-col">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center">
+                          <svg className="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span className="text-gray-600 dark:text-gray-300">{major.name}</span>
+                        </div>
+                        <span className="text-sm font-semibold text-[#0E1C36] dark:text-white">{major.match}%</span>
+                      </div>
+                      <div className="w-full h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full mt-1">
+                        <div 
+                          className="h-full bg-blue-500 rounded-full"
+                          style={{ width: `${major.match}%` }}
+                        />
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
               <div>
                 <h3 className="text-lg font-medium text-[#0E1C36] dark:text-white mb-2">
                   Recommended Universities
                 </h3>
-                <ul className="space-y-1">
+                <ul className="space-y-2">
                   {assessment.recommendedUniversities.map((university, i) => (
                     <li key={i} className="flex items-center text-gray-600 dark:text-gray-300">
                       <svg className="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -112,44 +149,17 @@ export default function AssessmentHistory() {
 
               <div>
                 <h3 className="text-lg font-medium text-[#0E1C36] dark:text-white mb-2">
-                  Your Interests
+                  Personality Type
                 </h3>
-                <div className="flex flex-wrap gap-2">
-                  {assessment.interests.map((interest, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm"
-                    >
-                      {interest}
-                    </span>
-                  ))}
+                <div className="p-4 bg-blue-50 dark:bg-blue-900 rounded-lg">
+                  <p className="text-lg font-semibold text-[#0E1C36] dark:text-white">
+                    {assessment.personalityType}
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                    Based on your assessment results
+                  </p>
                 </div>
               </div>
-
-              <div>
-                <h3 className="text-lg font-medium text-[#0E1C36] dark:text-white mb-2">
-                  Key Skills
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {assessment.skills.map((skill, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-6 flex justify-end">
-              <button
-                className="px-4 py-2 bg-[#0E1C36] text-white rounded-lg hover:bg-[#142c5e] dark:bg-[#AFCBFF] dark:text-[#0E1C36] dark:hover:text-[#AFCBFF] transition-colors"
-                onClick={() => navigate(`/assessment/${assessment.id}`)}
-              >
-                View Details
-              </button>
             </div>
           </motion.div>
         ))}

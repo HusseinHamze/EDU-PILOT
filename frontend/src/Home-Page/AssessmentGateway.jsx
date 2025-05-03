@@ -28,13 +28,11 @@ export default function AssessmentGateway() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
         {/* New User Card */}
         <motion.div
-          className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow cursor-pointer flex flex-col h-full"
+          className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col h-full"
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
           whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          onClick={() => navigate('/Assessment')}
         >
           <div className="flex flex-col h-full">
             <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -68,7 +66,10 @@ export default function AssessmentGateway() {
                 <span>University recommendations</span>
               </li>
             </ul>
-            <button className="w-full px-6 py-3 bg-[#0E1C36] text-white rounded-lg font-medium hover:bg-[#142c5e] dark:bg-[#AFCBFF] dark:text-[#0E1C36] dark:hover:text-[#AFCBFF] transition-colors">
+            <button 
+              onClick={() => navigate('/Assessment')}
+              className="w-full px-6 py-3 bg-[#0E1C36] text-white rounded-lg font-medium hover:bg-[#142c5e] dark:bg-[#AFCBFF] dark:text-[#0E1C36] dark:hover:text-[#AFCBFF] transition-colors cursor-pointer"
+            >
               Start Now
             </button>
           </div>
@@ -76,13 +77,11 @@ export default function AssessmentGateway() {
 
         {/* Returning User Card */}
         <motion.div
-          className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow cursor-pointer flex flex-col h-full"
+          className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col h-full"
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          onClick={() => navigate('/assessment/history')}
         >
           <div className="flex flex-col h-full">
             <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -116,7 +115,10 @@ export default function AssessmentGateway() {
                 <span>Update your preferences</span>
               </li>
             </ul>
-            <button className="w-full px-6 py-3 bg-[#0E1C36] text-white rounded-lg font-medium hover:bg-[#142c5e] dark:bg-[#AFCBFF] dark:text-[#0E1C36] dark:hover:text-[#AFCBFF] transition-colors">
+            <button 
+              onClick={() => navigate('/assessment/history')}
+              className="w-full px-6 py-3 bg-[#0E1C36] text-white rounded-lg font-medium hover:bg-[#142c5e] dark:bg-[#AFCBFF] dark:text-[#0E1C36] dark:hover:text-[#AFCBFF] transition-colors cursor-pointer"
+            >
               View History
             </button>
           </div>

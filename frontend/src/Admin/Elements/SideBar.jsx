@@ -32,8 +32,12 @@ const SideBar = ({ activeSection, setActiveSection, setUserType }) => {
     };
 
     const handleUserTypeClick = (type) => {
-        setUserType(type);
-        setActiveSection('users');
+        if (type === 'admins') {
+            setActiveSection('admins');
+        } else {
+            setUserType(type);
+            setActiveSection('users');
+        }
         setIsUsersDropdownOpen(false); // Close dropdown after selection
         if (isMobile) setIsOpen(false);
     };
@@ -77,6 +81,7 @@ const SideBar = ({ activeSection, setActiveSection, setUserType }) => {
                 ${isOpen ? 'w-64' : 'w-20'} 
                 transition-all duration-300 ease-in-out
                 shadow-lg flex flex-col rounded-tr-2xl rounded-br-2xl
+                ${isMobile && !isOpen ? 'w-20' : ''}
             `}>
                 {/* Header */}
                 <div className="p-4 flex items-center justify-between border-b border-white/20">
