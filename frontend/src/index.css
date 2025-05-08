@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+body{
+    background-color: #AFCBFF;
+    font-family: 'roboto',sans-serif;
+    background-image: radial-gradient(#0E1C36 0.5px, #AFCBFF 0.5px);
+    background-size: 10px 10px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #0E1C36;
+        background-image: radial-gradient(#AFCBFF 0.5px, #0E1C36 0.5px);
+    }
+}
